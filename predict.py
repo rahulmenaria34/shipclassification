@@ -4,15 +4,15 @@ import cv2
 import tensorflow as tf
 from tensorflow import keras
 
-class traffic:
+class ship:
     def __init__(self,filename):
         self.filename =filename
 
 
-    def trafficsign(self):
+    def shipdetection(self):
         class_dict = {'1': 'Cargo', '2': 'Military', '3': 'Carrier', '4': 'Cruise', '5': 'Tankers'}
 
-        model_path = "C:\\Users\\Kishan\\Desktop\\Traffic_sign_classfication-main\\Traffic_sign_classfication-main\\ship_classifier.h5"
+        model_path = "ship_classifier.h5"
         loaded_model = tf.keras.models.load_model(model_path)
 
         imagename = self.filename
